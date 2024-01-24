@@ -5,7 +5,7 @@ START=$(date +"%s")
 KERNEL_DIR=$(pwd)
 NAME_KERNEL_FILE="$1"
 chat_id="$TG_CHAT"
-token="6118183207:AAGFBiujEbR8dFT9n5NPXB5HwRQ22TFnkzU"
+token="$TG_TOKEN"
 
 #INFROMATION NAME KERNEL
 export KBUILD_BUILD_USER=$(grep kbuild_user $NAME_KERNEL_FILE | cut -f2 -d"=" )
