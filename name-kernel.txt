@@ -1,13 +1,13 @@
 #INFORMATION KERNEL
-link_kernel=https://github.com/realme-kernel-opensource/realme_C25_C25s_Narzo-50A-AndroidS-kernel-source -b master
-name_zip=evenS
+link_kernel=https://github.com/Rem01Gaming/liquid_kernel_realme_even -b OSS-RUI2
+name_zip=even
 local_version=-byismasrull
 kbuild_user=ismasrull
-kbuild_host=ismasrull@CirrusCi
+kbuild_host=@CirrusCi
 device_name=RMX3191
 vendor_name=even
 #OPTION FOR COMPILER
-defconfig_name=k68v1_64_defconfig
+defconfig_name=even_defconfig
   #just for incase for slmk
 
 
