@@ -1,13 +1,13 @@
 #INFORMATION KERNEL
 link_kernel=https://github.com/Rem01Gaming/liquid_kernel_realme_even -b OSS-RUI2
-name_zip=even
+name_zip=even-kernelsu
 local_version=-byismasrull
 kbuild_user=ismasrull
-kbuild_host=@CirrusCi
+kbuild_host=CirrusCi
 device_name=RMX3191
 vendor_name=even
 #OPTION FOR COMPILER
-defconfig_name=even_defconfig
+defconfig_name=even_ksu_defconfig
   #just for incase for slmk
 
 
