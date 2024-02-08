@@ -138,10 +138,11 @@ compile() {
     CONFIG_NO_ERROR_ON_MISMATCH=y \
     V=0 $DEFCONFIG_FLAG
 
-  cp out/arch/arm64/boot/Image.gz-dtb ~/kernel
-  make bootimage -j24
+  cp out/arch/arm64/boot/Image.gz-dtb ~/AnyKernel
+  cp out/arch/arm64/boot/dts/mediatek/mt6768.dtb ~/AnyKernel
+  cp out/arch/arm64/boot/Image.gz ~/AnyKernel
 
-  cp boot.img ~/AnyKernel
+  
   
 }
 
