@@ -36,19 +36,19 @@ clone_git() {
   
   #proton clang
   #git clone --depth=1 https://github.com/kdrag0n/proton-clang.git clang
-  mkdir -p clang 
+  mkdir -p ./clang 
   cd ~/clang
   wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r510928.tar.gz
   tar -xvzf *.gz
   rm -f *.gz
   cd ~/kernel
-  mkdir -p aarch64-gcc
+  mkdir -p ./aarch64-gcc
   cd ~/aarch64-gcc
   wget https://github.com/ZyCromerZ/Clang/releases/download/19.0.0git-20240225-release/Clang-19.0.0git-20240225.tar.gz
   tar -xvzf *.gz
   rm -f *.gz
   cd ~/kernel
-  mkdir -p aarch32-gcc
+  mkdir -p ./aarch32-gcc
   cd ~/aarch32-gcc
   wget https://github.com/ZyCromerZ/Clang/releases/download/19.0.0git-20240225-release/Clang-19.0.0git-20240225.tar.gz
   tar -xvzf *.gz
