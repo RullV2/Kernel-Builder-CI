@@ -1,6 +1,6 @@
 #INFORMATION KERNEL
 link_kernel=https://github.com/cumaRull/liquid_kernel_realme_even.git -b OSS-RUI2
-name_zip=even-kernelsu
+name_zip=even
 local_version=-byismasrull
 kbuild_user=ismasrull
 kbuild_host=CirrusCi
