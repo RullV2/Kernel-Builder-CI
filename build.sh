@@ -36,17 +36,34 @@ clone_git() {
   
   #proton clang
   #git clone --depth=1 https://github.com/kdrag0n/proton-clang.git clang
-  
+  mkdir -p ./clang 
+  cd ~/clang
+  wget https://android.googlesource.com/platform/prebuilts/clang/host/linux-x86/+archive/refs/heads/main/clang-r510928.tar.gz
+  tar -xvzf *.gz
+  rm -f *.gz
+  cd ~/kernel
+  mkdir -p ./aarch64-gcc
+  cd ~/aarch64-gcc
+  wget https://github.com/ZyCromerZ/Clang/releases/download/19.0.0git-20240225-release/Clang-19.0.0git-20240225.tar.gz
+  tar -xvzf *.gz
+  rm -f *.gz
+  cd ~/kernel
+  mkdir -p ./aarch32-gcc
+  cd ~/aarch32-gcc
+  wget https://github.com/ZyCromerZ/Clang/releases/download/19.0.0git-20240225-release/Clang-19.0.0git-20240225.tar.gz
+  tar -xvzf *.gz
+  rm -f *.gz
+  cd ~/kernel
   #clang 14
-  git clone --depth=1 $LINK_CLANG clang
+  #git clone --depth=1 $LINK_CLANG clang
 
   # BY ZYCROMERZ
   # git clone --depth=1 https://github.com/ZyCromerZ/aarch64-zyc-linux-gnu -b 13 aarch64-gcc
   # git clone --depth=1 https://github.com/ZyCromerZ/arm-zyc-linux-gnueabi -b 13 aarch32-gcc
 
   # BY ETERNAL COMPILER
-  git clone --depth=1 $LINK_GCC_AARCH64 aarch64-gcc
-  git clone --depth=1 $LINK_GCC_ARM aarch32-gcc
+  #git clone --depth=1 $LINK_GCC_AARCH64 aarch64-gcc
+  #git clone --depth=1 $LINK_GCC_ARM aarch32-gcc
 }
 
 cleaning_cache() {
@@ -139,6 +156,11 @@ compile() {
     V=0 $DEFCONFIG_FLAG
 
   cp out/arch/arm64/boot/Image.gz-dtb ~/AnyKernel
+  cp out/arch/arm64/boot/dts/mediatek/mt6768.dtb ~/AnyKernel
+  cp out/arch/arm64/boot/Image.gz ~/AnyKernel
+
+  
+  
 }
 
 zipping() {
